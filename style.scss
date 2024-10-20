@@ -1,0 +1,18 @@
+$green: #40cf8e;
+$text-color: #bbbbbb;
+$white-primary: #ffffff;
+$white-second: #ededed;
+$black: #131313;
+
+body {
+    margin: 0;
+    background-color: $white-primary;
+}
+
+.dark-mode {
+    background-color: $black;
+}
+
+img {
+    width: 50px;
+}
