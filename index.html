@@ -1,61 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Wassim SLIMANE</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wassim Slimane Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+</head>
+<body>
 
-        <link rel="stylesheet" href="./style.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    </head>
-    <body>
-        <nav>
-            <li>
-                <a href="#home">Home</a>
-            </li>
-            <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#tech-stack">Tech Stack</a>
-            </li>
-            <li>
-                <a href="#experiences">Experiences</a>
-            </li>
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
-            <li>
-                <a href="#my-writings">My writings</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </nav>
-        <header id="home">
-            <h1>
-                <div class="name">Wassim SLIMANE</div>
-                <div class="job">Web Developer</div>
-            </h1>
-            <div class="quote">Passionate, The CodeWizzurd, ...</div>
-        </header>
-        <section id="about" class="about"></section>
-        <section id="tech-stack" class="tech-stack">
-            <span>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
-            </span>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#tech-stack">Tech Stack</a></li>
+            <li><a href="#experiences">Experiences</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="theme-toggle">🌙</button>
+    </nav>
+
+    <!-- Placeholder for other sections -->
+    <section id="home">...</section>
+    <section id="about">...</section>
+    <section id="tech-stack">...</section>
+    <section id="experiences">...</section>
+    <section id="projects">...</section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="#" method="post">
+            <label for="name">Name (optional)</label>
+            <input type="text" id="name" name="name" placeholder="Your name">
             
-        </section>
-        <section id="experiences" class="experiences"></section>
-        <section id="projects" class="projects"></section>
-        <section id="my-writings" class="my-writings"></section>
-        <section id="contact" class="contact"></section>
-        <footer>
-            copyright
-            liens vers les résaux sociaux
-        </footer>
-    </body>
-</html>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="Your email address">
+            
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required placeholder="Subject of your message">
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="Type your message here..."></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 
-<script>
-    // Dark-mode
-</script>
+    <script src="scripts.js"></script>
+</body>
+</html>
