@@ -246,3 +246,33 @@ section {
         }
     }
 }
+
+// Footer
+footer {
+    background-color: $primary-color;
+    color: $text-color;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 2px solid $secondary-color;
+
+    p {
+        margin: 0.5rem 0;
+    }
+
+    .social-links {
+        margin-top: 0.5rem;
+        
+        a {
+            color: $secondary-color;
+            margin: 0 0.5rem;
+            text-decoration: none;
+            transition: color $transition;
+
+            &:hover {
+                color: $light-bg;
+            }
+        }
+    }
+}
+

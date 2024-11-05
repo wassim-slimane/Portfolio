@@ -191,4 +191,28 @@ section p {
   background-color: #388e3c;
 }
 
+footer {
+  background-color: #333;
+  color: #ffffff;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 2px solid #4CAF50;
+}
+footer p {
+  margin: 0.5rem 0;
+}
+footer .social-links {
+  margin-top: 0.5rem;
+}
+footer .social-links a {
+  color: #4CAF50;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  transition: color all 0.3s ease-in-out;
+}
+footer .social-links a:hover {
+  color: #f3f3f3;
+}
+
 /*# sourceMappingURL=style.css.map */
