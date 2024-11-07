@@ -67,7 +67,9 @@ nav #theme-toggle {
 }
 
 section {
-  margin: 50px 0;
+  max-width: 885px;
+  width: 100%;
+  margin: 50px auto;
   padding: 0 25px;
 }
 section h2 {
@@ -79,14 +81,15 @@ section p {
 
 #home {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-content: center;
   align-items: center;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
+  margin-top: 30px;
 }
-#home div {
-  margin: 0 20px;
+#home .profile-pic, #home .title {
+  margin: 15px 20px;
 }
 #home .profile-pic img {
   width: 250px;
@@ -95,7 +98,7 @@ section p {
 
 #tech-stack .tech-icons svg {
   width: 45px;
-  margin: 0 7px;
+  margin: 10px 10px 10px 0;
 }
 
 #experiences .experience {

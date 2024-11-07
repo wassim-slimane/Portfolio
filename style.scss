@@ -96,7 +96,9 @@ nav {
 }
 
 section {
-    margin: 50px 0;
+    max-width: 885px;
+    width: 100%;
+    margin: 50px auto;
     padding: 0 25px;
 
     h2 {
@@ -110,14 +112,15 @@ section {
 
 #home {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-content: center;
     align-items: center;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
+    margin-top: 30px;
 
-    div {
-        margin: 0 20px;
+    .profile-pic, .title {
+        margin: 15px 20px;
     }
     .profile-pic {
         img {
@@ -125,16 +128,13 @@ section {
             border-radius: 100%;
         }
     }
-    // .title {
-        
-    // }
 }
 
 #tech-stack {
     .tech-icons {
         svg {
             width: 45px;
-            margin: 0 7px;
+            margin: 10px 10px 10px 0;
         }
     }
 }
