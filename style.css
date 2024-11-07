@@ -20,6 +20,7 @@ nav {
 nav ul {
   display: flex;
   list-style: none;
+  margin: auto;
 }
 nav ul li {
   margin: 0 1rem;
