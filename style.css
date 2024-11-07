@@ -91,6 +91,15 @@ section p {
 #home .profile-pic, #home .title {
   margin: 15px 20px;
 }
+#home .profile-pic {
+  border-radius: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #333;
+  background-color: #f3f3f3;
+}
 #home .profile-pic img {
   width: 250px;
   border-radius: 100%;
