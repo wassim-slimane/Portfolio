@@ -5,6 +5,7 @@ $text-color: #ffffff;
 $dark-bg: #1b1b1b;
 $light-bg: #f3f3f3;
 $transition: all 0.3s ease-in-out;
+$light-box-shadow: #e4e7ec;
 
 // Manual Adjustments for Darkened and Lightened Secondary Colors
 $darkened-secondary: #388e3c;  // Adjusted to 20% darker than $secondary-color
@@ -15,7 +16,11 @@ $lightened-secondary: #66bb6a; // Adjusted to 20% lighter than $secondary-color
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Courier New', monospace;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -33,6 +38,7 @@ nav {
     ul {
         display: flex;
         list-style: none;
+        margin: auto;
 
         li {
             margin: 0 1rem;
@@ -57,6 +63,233 @@ nav {
         font-size: 1.5rem;
         transition: $transition;
     }
+}
+
+// Toggle button darkmode
+.toggle-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.toggle-slot {
+    position: relative;
+    height: 3em;
+    width: 6em;
+    border: 5px solid #e4e7ec;
+    border-radius: 10em;
+    background-color: $light-bg;
+    transition: background-color 250ms;
+}
+  
+.toggle-checkbox:checked ~ .toggle-slot {
+    background-color: $primary-color;
+}
+  
+.toggle-button {
+    transform: translate(2.75em, 0.25em);
+    position: absolute;
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    background-color: $light-bg;
+    box-shadow: inset 0px 0px 0px 0.75em #ffbb52;
+    transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+}
+  
+.toggle-checkbox:checked ~ .toggle-slot .toggle-button {
+    background-color: $primary-color;
+    box-shadow: inset 0px 0px 0px 0.75em $light-bg;
+    transform: translate(0.50em, 0.25em);
+}
+  
+.sun-icon {
+    position: absolute;
+    height: 2em;
+    width: 2em;
+    color: #ffbb52;
+}
+  
+.sun-icon-wrapper {
+    position: absolute;
+    height: 2em;
+    width: 2em;
+    opacity: 1;
+    transform: translate(0.5em, 0.25em) rotate(15deg);
+    transform-origin: 50% 50%;
+    transition: opacity 150ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+}
+  
+.toggle-checkbox:checked ~ .toggle-slot .sun-icon-wrapper {
+    opacity: 0;
+    transform: translate(3em, 2em) rotate(0deg);
+}
+  
+.moon-icon { 
+    position: absolute;
+    height: 2em;
+    width: 2em;
+    color: white;
+}
+  
+.moon-icon-wrapper {
+    position: absolute;
+    height: 2em;
+    width: 2em;
+    opacity: 0;
+    transform: translate(4.75em, 0em) rotate(0deg);
+    transform-origin: 50% 50%;
+    transition: opacity 150ms, transform 500ms cubic-bezier(.26,2.5,.46,.71);
+}
+  
+.toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper {
+    opacity: 1;
+    transform: translate(3em, 0.25em) rotate(-15deg);
+}
+
+// Dark Mode Toggle
+.dark-mode {
+    background-color: $dark-bg;
+    color: $text-color;
+
+    nav {
+        background-color: $primary-color; // Dark mode background for nav
+        
+        ul li a {
+            color: $text-color;
+
+            &:hover {
+                color: $lightened-secondary;
+            }
+        }
+
+        #theme-toggle {
+            color: $lightened-secondary;
+        }
+    }
+
+    #projects {
+        .project-category {
+            .card {
+                background-color: $light-bg;
+                color: $primary-color;
+                border: 1px solid $light-bg;
+            }
+        }
+    }
+
+    #contact h2 {
+        color: $text-color;
+    }
+}
+
+section {
+    max-width: 885px;
+    width: 100%;
+    margin: 30px auto;
+    padding: 25px 25px;
+
+    h2 {
+        margin-bottom: 15px;
+    }
+
+    p {
+        line-height: 20px;
+    }
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 30px;
+
+    .profile-pic, .title {
+        margin: 15px 20px;
+    }
+    .profile-pic {
+        border-radius: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $primary-color;
+        background-color: $light-bg;
+        img {
+            width: 250px;
+            border-radius: 100%;
+        }
+    }
+}
+
+#tech-stack {
+    .tech-icons {
+        svg {
+            width: 45px;
+            margin: 10px 10px 10px 0;
+        }
+    }
+}
+
+#experiences {
+    .experience {
+        margin: 20px 0;
+        
+        .head {
+            margin-bottom: 10px;
+        }
+        .content {
+            li {
+                margin: 5px 0;
+            }
+        }
+    }
+}
+
+#projects {
+    .project-category {
+        margin: 15px 0;
+        h3 {
+            margin-bottom: 10px;
+        }
+        .card {
+            border: 1px solid #1b1b1b;
+            border-radius: 6px;
+            max-width: 250px;
+            text-align: center;
+            img {
+                max-width: 250px;
+                width: 100%;
+                border-top-left-radius: 6px;
+                border-top-right-radius: 6px;
+            }
+            .content {
+                padding: 5px;
+                h4 {
+                    margin-bottom: 10px;
+                }
+                p {
+                    padding: 0px 5px 10px;
+                }
+            }
+
+        }
+        .card:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+#projects .tabs button {
+    background: none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 // Contact Section
@@ -111,28 +344,32 @@ nav {
     }
 }
 
-// Dark Mode Toggle
-.dark-mode {
-    background-color: $dark-bg;
+// Footer
+footer {
+    background-color: $primary-color;
     color: $text-color;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 2px solid $secondary-color;
 
-    nav {
-        background-color: $primary-color; // Dark mode background for nav
+    p {
+        margin: 0.5rem 0;
+    }
+
+    .social-links {
+        margin-top: 0.5rem;
         
-        ul li a {
-            color: $text-color;
+        a {
+            color: $secondary-color;
+            margin: 0 0.5rem;
+            text-decoration: none;
+            transition: color $transition;
 
             &:hover {
-                color: $lightened-secondary;
+                color: $light-bg;
             }
         }
-
-        #theme-toggle {
-            color: $lightened-secondary;
-        }
-    }
-
-    #contact h2 {
-        color: $text-color;
     }
 }
+
