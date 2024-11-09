@@ -19,6 +19,10 @@ $lightened-secondary: #66bb6a; // Adjusted to 20% lighter than $secondary-color
     font-family: 'Courier New', monospace;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: $light-bg;
     color: $primary-color;
@@ -184,8 +188,8 @@ nav {
 section {
     max-width: 885px;
     width: 100%;
-    margin: 50px auto;
-    padding: 0 25px;
+    margin: 30px auto;
+    padding: 25px 25px;
 
     h2 {
         margin-bottom: 15px;
