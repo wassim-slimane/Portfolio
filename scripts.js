@@ -1,3 +1,12 @@
+document.getElementById('hamburger-menu').addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+
+    // Change le statut aria-expanded pour l'accessibilité
+    const isExpanded = this.getAttribute('aria-expanded') === 'true' || false;
+    this.setAttribute('aria-expanded', !isExpanded);
+});
+
 document.getElementById('theme-toggle').addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
 });

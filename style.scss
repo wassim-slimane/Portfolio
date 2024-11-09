@@ -35,7 +35,15 @@ nav {
     padding: 1rem 2rem;
     background-color: $primary-color;
 
-    ul {
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: $primary-color;
+    }
+
+    .nav-links {
         display: flex;
         list-style: none;
         margin: auto;
@@ -62,6 +70,36 @@ nav {
         cursor: pointer;
         font-size: 1.5rem;
         transition: $transition;
+    }
+}
+#hamburger-menu {
+    display: none;
+    font-size: 1.5rem;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .nav {
+        .nav-links {
+            display: none; /* Cache les liens de navigation par défaut */
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            right: 0;
+            background-color: #333;
+            width: 100%;
+            padding: 1rem;
+        }
+        
+        /* Affiche les liens quand la classe active est présente */
+        .nav-links.active {
+            display: flex;
+        }
+    }
+    #hamburger-menu {
+        display: block; /* Affiche le bouton hamburger */
     }
 }
 

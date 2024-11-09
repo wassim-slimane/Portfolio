@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -21,20 +22,27 @@ nav {
   padding: 1rem 2rem;
   background-color: #333;
 }
-nav ul {
+nav .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #333;
+}
+nav .nav-links {
   display: flex;
   list-style: none;
   margin: auto;
 }
-nav ul li {
+nav .nav-links li {
   margin: 0 1rem;
 }
-nav ul li a {
+nav .nav-links li a {
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
 }
-nav ul li a:hover {
+nav .nav-links li a:hover {
   color: #4CAF50;
 }
 nav #theme-toggle {
@@ -46,6 +54,36 @@ nav #theme-toggle {
   transition: all 0.3s ease-in-out;
 }
 
+#hamburger-menu {
+  display: none;
+  font-size: 1.5rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    /* Affiche les liens quand la classe active est présente */
+  }
+  .nav .nav-links {
+    display: none; /* Cache les liens de navigation par défaut */
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 1rem;
+  }
+  .nav .nav-links.active {
+    display: flex;
+  }
+  #hamburger-menu {
+    display: block; /* Affiche le bouton hamburger */
+  }
+}
 .toggle-checkbox {
   position: absolute;
   opacity: 0;
