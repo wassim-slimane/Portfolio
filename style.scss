@@ -128,6 +128,7 @@ nav {
     border-radius: 10em;
     background-color: $light-bg;
     transition: background-color 250ms;
+    cursor: pointer;
 }
   
 .toggle-checkbox:checked ~ .toggle-slot {

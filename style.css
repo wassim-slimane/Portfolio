@@ -103,6 +103,7 @@ nav #theme-toggle {
   border-radius: 10em;
   background-color: #f3f3f3;
   transition: background-color 250ms;
+  cursor: pointer;
 }
 
 .toggle-checkbox:checked ~ .toggle-slot {
