@@ -64,10 +64,10 @@ nav #theme-toggle {
 }
 
 @media (max-width: 768px) {
-  .nav {
+  nav {
     /* Affiche les liens quand la classe active est présente */
   }
-  .nav .nav-links {
+  nav .nav-links {
     display: none; /* Cache les liens de navigation par défaut */
     flex-direction: column;
     position: absolute;
@@ -77,8 +77,11 @@ nav #theme-toggle {
     width: 100%;
     padding: 1rem;
   }
-  .nav .nav-links.active {
+  nav .nav-links.active {
     display: flex;
+  }
+  nav .nav-links li {
+    margin: 5px 1rem;
   }
   #hamburger-menu {
     display: block; /* Affiche le bouton hamburger */
