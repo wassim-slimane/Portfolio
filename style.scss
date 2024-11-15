@@ -223,6 +223,18 @@ nav {
         border: 1px solid $light-bg;
     }
 
+    #projects {
+        .projects-wrapper {
+            .project-category {
+                border: 1px dashed $light-bg;
+
+                a {
+                    color: $text-color;
+                }
+            }
+        } 
+    }
+
     #contact h2 {
         color: $text-color;
     }

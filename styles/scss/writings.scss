@@ -1,0 +1,15 @@
+@use '../../style.scss' as i;
+
+body {
+    background-color: i.$light-bg;
+    color: i.$primary-color;
+    transition: i.$transition;
+}
+
+.content-wrapper {
+    margin: 30px;
+    
+    h1 {
+        margin-bottom: 30px;
+    }
+}

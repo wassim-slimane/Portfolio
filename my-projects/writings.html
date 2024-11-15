@@ -6,17 +6,44 @@
     <title>Wassim Slimane - Writings</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../styles/css/writings.css">
+    <script src="https://code.iconify.design/1/1.0.4/iconify.min.js">   </script>
 </head>
 <body>
-    <h1>My Apps</h1>
-    <div class="project-category">
-        <div class="card">
-            <img src="../img/writing1.jpg" alt="Writing 1">
-            <div class="content">
-                <h4>Writing 1</h4>
-                <p>Sample description of Writing 1, exploring insights into web development.</p>
-            </div>
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-container">
+            <button id="hamburger-menu" aria-label="Menu" aria-expanded="false">
+                &#9776; <!-- Icône hamburger -->
+            </button>
+            <ul class="nav-links">
+                <li><span class="go-back">&#8592;</span><a href="../index.html">Home</a></li>
+            </ul>
         </div>
-        <!-- Additional cards here -->
+        <label>
+            <input id="theme-toggle" class='toggle-checkbox' type='checkbox'></input>
+            <div class='toggle-slot'>
+              <div class='sun-icon-wrapper'>
+                <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></div>
+              </div>
+              <div class='toggle-button'></div>
+              <div class='moon-icon-wrapper'>
+                <div class="iconify moon-icon" data-icon="feather-moon" data-inline="false"></div>
+              </div>
+            </div>
+          </label>
+    </nav>
+
+    <div class="content-wrapper">
+        <h1>My Writings</h1>
+        <div class="project-category">
+            <div class="card">
+                <img src="../img/writing1.jpg" alt="Writing 1">
+                <div class="content">
+                    <h4>Writing 1</h4>
+                    <p>Sample description of Writing 1, exploring insights into web development.</p>
+                </div>
+            </div>
+            <!-- Additional cards here -->
+        </div>
     </div>
 </body>

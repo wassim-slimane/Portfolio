@@ -192,6 +192,12 @@ nav #theme-toggle {
   color: #333;
   border: 1px solid #f3f3f3;
 }
+.dark-mode #projects .projects-wrapper .project-category {
+  border: 1px dashed #f3f3f3;
+}
+.dark-mode #projects .projects-wrapper .project-category a {
+  color: #ffffff;
+}
 .dark-mode #contact h2 {
   color: #ffffff;
 }
