@@ -1,3 +1,3 @@
 # Portfolio
 
-Introduce myself and my skills as a junior developer and sharing my projects.
+Introduce myself and my skills as a software engineer, sharing my projects, my interests and more.
