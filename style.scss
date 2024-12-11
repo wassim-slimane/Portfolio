@@ -217,14 +217,22 @@ nav {
         }
     }
 
+    .card {
+        background-color: $light-bg;
+        color: $primary-color;
+        border: 1px solid $light-bg;
+    }
+
     #projects {
-        .project-category {
-            .card {
-                background-color: $light-bg;
-                color: $primary-color;
-                border: 1px solid $light-bg;
+        .projects-wrapper {
+            .project-category {
+                border: 1px dashed $light-bg;
+
+                a {
+                    color: $text-color;
+                }
             }
-        }
+        } 
     }
 
     #contact h2 {
@@ -299,44 +307,63 @@ section {
 }
 
 #projects {
-    .project-category {
-        margin: 15px 0;
-        h3 {
-            margin-bottom: 10px;
-        }
-        .card {
-            border: 1px solid #1b1b1b;
+    .projects-wrapper {
+        display: flex;
+        .project-category {
+            margin: 15px 10px 0 0;
+            border: 1px dashed $dark-bg;
             border-radius: 6px;
-            max-width: 250px;
-            text-align: center;
-            img {
-                max-width: 250px;
-                width: 100%;
-                border-top-left-radius: 6px;
-                border-top-right-radius: 6px;
-            }
-            .content {
-                padding: 5px;
-                h4 {
-                    margin-bottom: 10px;
-                }
-                p {
-                    padding: 0px 5px 10px;
-                }
-            }
+            padding: 10px;
+            
+            a {
+                text-decoration: none;
+                color: $primary-color;
+                
 
+            }
         }
-        .card:hover {
-            cursor: pointer;
+        .project-category:hover {
+            box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+            transform: translateY(-0.25em);
+
+            a {
+                color: $secondary-color;
+                box-shadow: inset 0 -3.25em 0 0 var(--hover);
+            }
         }
+        
     }
 }
-
+ 
 #projects .tabs button {
     background: none;
     border: none;
     font-weight: bold;
     cursor: pointer;
+}
+.card {
+    border: 1px solid #1b1b1b;
+    border-radius: 6px;
+    max-width: 250px;
+    text-align: center;
+    img {
+        max-width: 250px;
+        width: 100%;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+    .content {
+        padding: 5px;
+        h4 {
+            margin-bottom: 10px;
+        }
+        p {
+            padding: 0px 5px 10px;
+        }
+    }
+}
+.card:hover {
+    cursor: pointer; 
 }
 
 // Contact Section

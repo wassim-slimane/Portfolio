@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "sass": "sass --watch style.scss:style.css"
+    "sass": "sass --watch style.scss:style.css ./styles/scss:./styles/css"
   },
   "devDependencies": {
     "sass": "^1.70.0"

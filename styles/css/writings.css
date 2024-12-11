@@ -380,4 +380,17 @@ footer .social-links a:hover {
   color: #f3f3f3;
 }
 
-/*# sourceMappingURL=style.css.map */
+body {
+  background-color: #f3f3f3;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+.content-wrapper {
+  margin: 30px;
+}
+.content-wrapper h1 {
+  margin-bottom: 30px;
+}
+
+/*# sourceMappingURL=writings.css.map */
