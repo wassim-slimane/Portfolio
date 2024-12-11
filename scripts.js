@@ -47,7 +47,7 @@ async function submitForm(form) {
         },
         body: JSON.stringify(form),
     }
-    return fetch('http://localhost:3000/contact', requestOptions)
+    return fetch('', requestOptions);
 }
 
 // Start the picture rotation every 5 seconds
