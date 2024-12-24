@@ -47,7 +47,7 @@ async function submitForm(form) {
         },
         body: JSON.stringify(form),
     }
-    return fetch('', requestOptions);
+    return fetch('https://nodejs-mailer.onrender.com/api/contact', requestOptions);
 }
 
 // Start the picture rotation every 5 seconds
@@ -70,7 +70,7 @@ document.getElementById("submit-form").addEventListener("click", (event) => {
         submitForm(form).then((response) => {
             console.log(form);
             alert('Email sent')
-            resetFormValues();
+            //resetFormValues();
         }).catch((error) => {
             console.log('error:', error);
             alert('Error with Email')
