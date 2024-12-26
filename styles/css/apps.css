@@ -393,4 +393,14 @@ body {
   margin-bottom: 30px;
 }
 
+@media (max-width: 768px) {
+  nav .nav-links {
+    display: flex !important;
+    position: initial !important;
+  }
+  nav .nav-links li {
+    margin: 0 1rem;
+  }
+}
+
 /*# sourceMappingURL=apps.css.map */

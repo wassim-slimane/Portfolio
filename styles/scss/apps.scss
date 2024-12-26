@@ -13,3 +13,15 @@ body {
         margin-bottom: 30px;
     }
 }
+@media (max-width: 768px) {
+    nav {
+        .nav-links {
+            display: flex !important;
+            position: initial !important;
+
+            li {
+                margin: 0 1rem;
+            }
+        }
+    }
+}
