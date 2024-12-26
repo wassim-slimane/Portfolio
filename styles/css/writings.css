@@ -356,6 +356,11 @@ section p {
   background-color: #388e3c;
 }
 
+#mail-response {
+  display: none;
+  margin: 30px;
+}
+
 footer {
   background-color: #333;
   color: #ffffff;
