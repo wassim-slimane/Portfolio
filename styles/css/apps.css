@@ -396,7 +396,10 @@ body {
 @media (max-width: 768px) {
   nav .nav-links {
     display: flex !important;
-    position: initial !important;
+    position: absolute;
+    top: inherit;
+    right: inherit;
+    padding: inherit;
   }
   nav .nav-links li {
     margin: 0 1rem;

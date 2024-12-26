@@ -17,7 +17,10 @@ body {
     nav {
         .nav-links {
             display: flex !important;
-            position: initial !important;
+            position: absolute;
+            top: inherit;
+            right: inherit;
+            padding: inherit;
 
             li {
                 margin: 0 1rem;
