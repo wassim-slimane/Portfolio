@@ -120,8 +120,8 @@ function validateContactForm(name, email, subject, message) {
     if (message_trimmed === "") {
       alert("Message is required.");
       return false;
-    } else if (message_trimmed.length < 10) {
-      alert("Message must be at least 10 characters long.");
+    } else if (message_trimmed.length < 5) {
+      alert("Message must be at least 5 characters long.");
       return false;
     }
   
