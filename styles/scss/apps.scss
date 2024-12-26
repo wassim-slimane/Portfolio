@@ -13,3 +13,26 @@ body {
         margin-bottom: 30px;
     }
 }
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+@media (max-width: 768px) {
+    nav {
+        .nav-container {
+            padding: 0;
+        }
+        .nav-links {
+            display: flex !important;
+            position: absolute;
+            top: inherit;
+            right: inherit;
+            padding: inherit;
+
+            li {
+                margin: 0 1rem;
+            }
+        }
+    }
+}

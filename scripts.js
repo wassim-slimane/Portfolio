@@ -53,9 +53,31 @@ async function submitForm(form) {
 // Start the picture rotation every 5 seconds
 setInterval(changeProfilePicture, 5000);
 
+function disableUI() {
+    document.getElementById("contact").style.pointerEvents = 'none';
+    const submitBtn = document.getElementById("submit-form");
+    submitBtn.disabled = true;
+    submitBtn.pointerEvents = 'none';
+    submitBtn.textContent = 'Pending...';
+}
+function enableUI() {
+    document.getElementById("contact").style.pointerEvents = 'auto';
+    const submitBtn = document.getElementById("submit-form");
+    submitBtn.disabled = false;
+    submitBtn.pointerEvents = 'auto';
+    submitBtn.textContent = 'Send Message';
+}
+function displayResponse(message, type='valid') {
+    const response = document.getElementById('mail-response');
+    response.style.color = type === 'valid' ? 'green' : 'red';
+    response.textContent = message;
+    response.style.display = 'block';
+}
+
 //Contact form
 document.getElementById("submit-form").addEventListener("click", (event) => {
     event.preventDefault();
+    disableUI();
     
     const [name, email, subject, message] = getFormValues();
     const valid = validateContactForm(name, email, subject, message);
@@ -68,15 +90,14 @@ document.getElementById("submit-form").addEventListener("click", (event) => {
             message: message,
         };
         submitForm(form).then((response) => {
-            console.log(form);
-            alert('Email sent')
-            //resetFormValues();
+            resetFormValues();
+            displayResponse('Your message has been successfully sent', 'valid');
+            enableUI();
         }).catch((error) => {
-            console.log('error:', error);
-            alert('Error with Email')
+            displayResponse(error, 'error');
+            enableUI();
         });
     }
-    
 });
 function getFormValues() {
 
@@ -120,13 +141,10 @@ function validateContactForm(name, email, subject, message) {
     if (message_trimmed === "") {
       alert("Message is required.");
       return false;
-    } else if (message_trimmed.length < 10) {
-      alert("Message must be at least 10 characters long.");
+    } else if (message_trimmed.length < 5) {
+      alert("Message must be at least 5 characters long.");
       return false;
     }
-  
-    // If all validations pass
-    alert("Form submitted successfully!");
     
     return true;
 }
