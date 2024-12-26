@@ -15,6 +15,9 @@ body {
 }
 @media (max-width: 768px) {
     nav {
+        .nav-container {
+            padding: 0;
+        }
         .nav-links {
             display: flex !important;
             position: absolute;

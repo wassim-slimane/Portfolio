@@ -393,4 +393,20 @@ body {
   margin-bottom: 30px;
 }
 
+@media (max-width: 768px) {
+  nav .nav-container {
+    padding: 0;
+  }
+  nav .nav-links {
+    display: flex !important;
+    position: absolute;
+    top: inherit;
+    right: inherit;
+    padding: inherit;
+  }
+  nav .nav-links li {
+    margin: 0 1rem;
+  }
+}
+
 /*# sourceMappingURL=editings.css.map */
