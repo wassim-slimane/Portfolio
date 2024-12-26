@@ -68,12 +68,10 @@ document.getElementById("submit-form").addEventListener("click", (event) => {
             message: message,
         };
         submitForm(form).then((response) => {
-            console.log(form);
-            alert('Email sent')
+            console.log(response);
             //resetFormValues();
         }).catch((error) => {
             console.log('error:', error);
-            alert('Error with Email')
         });
     }
     
@@ -124,9 +122,6 @@ function validateContactForm(name, email, subject, message) {
       alert("Message must be at least 5 characters long.");
       return false;
     }
-  
-    // If all validations pass
-    alert("Form submitted successfully!");
     
     return true;
 }
